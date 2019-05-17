@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contact</title>
+  <link rel="stylesheet" href="../reset.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../fonts.css">
+</head>
+
+<body>
+  <header id="main__header">
+    <div class="container">
+      <figure class = "logo">
+        <img src="../img/Logo.png" alt="Logo"></a>
+       </figure>
+      <nav>
+        <ul class="footlist">
+          <li> <a title="Home" href="../Index.html">Home</a> </li>
+          <li> <a title="Projects" href="../Projects/Projects.html">Projects</a> </li>
+          <li> <a title="AboutMe" href="../AboutMe/AboutMe.html">About Me</a> </li>
+          <li> <a title="Contact" href="../Contact/Contact.html">Contact</a> </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+    <form class="grid">
+        <div class="item1"><input class = "small" type="text" id=name name="name">Name</div>
+        <div class="item2"><input class = "small" type="text" id="email" name="mail">Email</div>
+        <div class="item3"><input class = "small" type="text" id="subject" name="subject">Subject</div>
+        <div class="item4"><textarea class = "Big" id="message" name="message">Message</textarea></div>
+        <div class="item5"><button class = "sendbutton" id = "sendbutton" type="button">Send</button></div>
+        <script>
+          var size = screen.width;
+          var target = document.querySelector('#sendbutton');
+          var body = document.querySelector('.grid');
+          target.addEventListener('click', onClickHandler);
+          function onClickHandler(e) {
+            e.preventDefault();
+            console.log(e);
+            console.log(size);
+            //body.classList.add('sent');
+            document.getElementById("message").disabled = true;
+            document.getElementById("email").disabled = true;
+            document.getElementById("subject").disabled = true;
+            document.getElementById("name").disabled = true;
+          };
+          </script>
+    </form>
+    <footer class="main__footer">
+        <div class="LogosFooter container">
+            <p>
+              <figure class="img2">
+                <a href = "https://www.linkedin.com/in/diegogarciagamedev/" title = "linkedIn"><img src="../img/Linked.png"></img>
+                </a>
+              </figure>
+            </p>
+            <figure class="img1">
+                <a href = "https://www.instagram.com/blind_dgo/" title = "instagram"><img src="../img/Insta.png"></img>
+                </a>
+              </figure>
+          </div>
+    </footer>
+</body>
+
+</html>
